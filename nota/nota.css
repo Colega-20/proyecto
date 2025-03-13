@@ -1,0 +1,223 @@
+/** @format */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.datos {
+  width: 100%;
+}
+
+hr {
+  border: none;
+  height: 3px;
+  background: linear-gradient(to right, #00acc1, #a5a5a5);
+  margin: 0 0;
+}
+
+.icon-link {
+  width: 10%;
+  position: relative;
+  left: 44%;
+  display: inline-block;
+}
+
+.icon-link:hover svg path {
+  fill: yellow; /* Cambiar este color al color deseado */
+}
+
+input {
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 4px;
+  font-size: 0.85em;
+  color: #000000;
+}
+
+label,
+legend,
+p {
+  color: #fff;
+}
+fieldset {
+  color: #fff;
+}
+
+body {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.marco {
+  position: relative;
+  width: 350px;
+  height: 550px;
+  border-radius: 5%;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.marco span {
+  position: absolute;
+  inset: 3px;
+  overflow: hidden;
+  border-radius: 5%;
+}
+
+/* marco del formurario de Ingresar y fondo */
+.marco::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: repeating-conic-gradient(
+    from var(--a),
+    #1f2531 -45deg,
+    #008cff 45deg,
+    transparent 45deg,
+    transparent 135deg,
+    #1f2531 135deg,
+    #008cff 225deg,
+    transparent 225deg,
+    transparent 315deg
+  );
+  border-radius: 5%;
+  animation: animate 10s linear infinite;
+}
+
+/* animacion del marco*/
+@property --a {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0deg;
+}
+
+@keyframes animate {
+  0% {
+    --a: 0deg;
+  }
+  100% {
+    --a: 360deg;
+  }
+}
+
+.marco span::before {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  background-size: cover;
+  background-position: center;
+}
+
+.marco span::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px);
+}
+
+/* marco del formurario de registro y fondo */
+#Ingresar {
+  color: #008cff;
+}
+
+#Ingresar:hover {
+  text-decoration: underline;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url(fondo/arcane_jinx.jpg) no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  transition: 0.5s;
+}
+
+body.Inscribirse .marco span::before,
+body.Inscribirse .marco span::after {
+  background: url(fondo/arcane_jinx.jpg) no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+#RegistrarCuenta,
+#Borrar {
+  background: #008cff;
+  width: 100%;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+
+  padding: 6px 15px;
+  border-radius: 4px;
+  font-size: 0.85em;
+  color: #000000;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* formurario contenido */
+form {
+  position: absolute;
+  gap: 5px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  width: 85%;
+  transition: 0.5s;
+}
+
+/* Texto */
+form h2 {
+  align-items: center;
+  position: relative;
+  color: #fff;
+
+  font-weight: 500;
+  font-size: 1.5em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0px;
+}
+
+/* colores del input*/
+#Borrar {
+  width: 100%;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.4);
+  padding: 6px 15px;
+  border-radius: 4px;
+  font-size: 0.85em;
+  color: #000000;
+}
+
+@media screen and (max-width: 1180px) {
+  .marco::before {
+    animation: none;
+    background: none;
+  }
+}
+
+@media screen and (max-width: 1180px) {
+  .marco {
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.45);
+  }
+}

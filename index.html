@@ -1,0 +1,340 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>proyecto</title>
+    <link rel="stylesheet" href="gareria.css" />
+    <link href="menup.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <!-- Menu -->
+
+    <nav id="slide-menu">
+      <ul>
+        <li style="width: 64%">
+          <a href="nota/nota.html" class="educativo">Publicar Calificaciones</a>
+        </li>
+        <hr id="hr" />
+        <li style="width: 17%" onclick="index()">Home</li>
+        <hr />
+        <li style="width: 31%" onclick="index()">Dashboard</li>
+        <hr />
+        <li style="width: 18%" onclick="index()">Profile</li>
+        <hr />
+        <li style="width: 23%" onclick="index()">Settings</li>
+        <hr />
+        <li style="width: 20%" onclick="index()">Logout</li>
+        <hr />
+        <li style="width: 20%" onclick="index()">Support</li>
+      </ul>
+
+      <footer id="footer2">
+        <button class="btn-Equipo" onclick="equipoMsg()">
+          Creditos de desarrollo
+        </button>
+      </footer>
+      <!-- BOTON EQUIPO DE PAGINA-->
+    </nav>
+
+    <div id="content">
+      <div class="equipo">
+        <div class="equipo-msg">
+          <!-- BOTON EQUIPO de pagina -->
+          <button class="close" onclick="equipo_close()">
+            <svg viewBox="0 0 512 512" width="20" title="window-close">
+              <path
+                d="M464 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-83.6 290.5c4.8 4.8 4.8 12.6 0 17.4l-40.5 40.5c-4.8 4.8-12.6 4.8-17.4 0L256 313.3l-66.5 67.1c-4.8 4.8-12.6 4.8-17.4 0l-40.5-40.5c-4.8-4.8-4.8-12.6 0-17.4l67.1-66.5-67.1-66.5c-4.8-4.8-4.8-12.6 0-17.4l40.5-40.5c4.8-4.8 12.6-4.8 17.4 0l66.5 67.1 66.5-67.1c4.8-4.8 12.6-4.8 17.4 0l40.5 40.5c4.8 4.8 4.8 12.6 0 17.4L313.3 256l67.1 66.5z"></path>
+            </svg>
+          </button>
+          <h3>Equipo de desarrollo</h3>
+          <p>
+            Edisson [TA]
+            <span
+              >(diseño, extruturacion, animador css y la logica de
+              programacion).</span
+            >
+          </p>
+          <p>Wander <span>(Experto en Html).</span></p>
+          <p>
+            Abraham <span>(creador original de la animacion del menu).</span>
+          </p>
+          <p>
+            Luis <span>(creador de los video de fondo y su javascript).</span>
+          </p>
+          <p>
+            Carlos
+            <span>(creador de las particulas en la parte del formurario)</span>
+          </p>
+          <p>
+            Maikol
+            <span>(creador original de la animacion del boton menu).</span>
+          </p>
+          <p>
+            Nuestro Contacto.
+            <a
+              href="https://twitter.com/xwanderxx"
+              class="button modal-trigger"
+              data-modal="contact"
+              >(Twitter)</a
+            >
+          </p>
+        </div>
+      </div>
+
+      <!-- BARRA DE NAVEGACION -->
+      <nav id="barra">
+        <div id="grupo">
+          <!-- menu boton -->
+          <svg
+            version="1.1"
+            class="svg"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 60 60">
+            <rect x="5" y="15" width="50" height="6"></rect>
+            <rect x="5" y="27" width="50" height="6"></rect>
+            <rect x="5" y="27" width="50" height="6"></rect>
+            <rect x="5" y="40" width="50" height="6"></rect>
+          </svg>
+
+          <!-- Enlace a la página de publicar calificaciones -->
+          <a href="nota/nota.html" class="educativo2"
+            >Publicar Calificaciones</a
+          >
+
+          <!-- Barra de búsqueda -->
+          <input
+            type="text"
+            id="busqueda"
+            placeholder="Búsqueda de estudiantes" />
+
+          <!-- Icono de notificaciones -->
+          <svg
+            class="campana"
+            fill="#fff"
+            height="24px"
+            width="24px"
+            version="1.1"
+            id="Capa_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 611.999 611.999"
+            xml:space="preserve">
+            <path
+              d="M570.107,500.254c-65.037-29.371-67.511-155.441-67.559-158.622v-84.578c0-81.402-49.742-151.399-120.427-181.203 C381.969,34,347.883,0,306.001,0c-41.883,0-75.968,34.002-76.121,75.849c-70.682,29.804-120.425,99.801-120.425,181.203v84.578 c-0.046,3.181-2.522,129.251-67.561,158.622c-7.409,3.347-11.481,11.412-9.768,19.36c1.711,7.949,8.74,13.626,16.871,13.626
+                 h164.88c3.38,18.594,12.172,35.892,25.619,49.903c17.86,18.608,41.479,28.856,66.502,28.856
+                 c25.025,0,48.644-10.248,66.502-28.856c13.449-14.012,22.241-31.311,25.619-49.903h164.88c8.131,0,15.159-5.676,16.872-13.626
+                 C581.586,511.664,577.516,503.6,570.107,500.254z M484.434,439.859c6.837,20.728,16.518,41.544,30.246,58.866H97.32
+                 c13.726-17.32,23.407-38.135,30.244-58.866H484.434z M306.001,34.515c18.945,0,34.963,12.73,39.975,30.082
+                 c-12.912-2.678-26.282-4.09-39.975-4.09s-27.063,1.411-39.975,4.09C271.039,47.246,287.057,34.515,306.001,34.515z
+                  M143.97,341.736v-84.685c0-89.343,72.686-162.029,162.031-162.029s162.031,72.686,162.031,162.029v84.826
+                 c0.023,2.596,0.427,29.879,7.303,63.465H136.663C143.543,371.724,143.949,344.393,143.97,341.736z M306.001,577.485
+                 c-26.341,0-49.33-18.992-56.709-44.246h113.416C355.329,558.493,332.344,577.485,306.001,577.485z" />
+          </svg>
+        </div>
+      </nav>
+
+      <!-- gareria de  imagenes -->
+      <div class="contenedor">
+        <h1 class="text-center mb-3">Novedades y Area de trabajo</h1>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner row w-100 mx-auto">
+            <div class="carousel-item col-md-4 active">
+              <div class="card">
+                <img
+                  class="card-img-top img-fluid"
+                  src="https://picsum.photos/seed/1/800/600"
+                  alt="Card image cap" />
+                <div class="card-body">
+                  <h4 class="card-title">Card 1</h4>
+                  <p class="card-text">
+                    Esta es una tarjeta más larga con texto de apoyo a
+                    continuación como introducción natural al contenido
+                    adicional. Este contenido es un poco más largo.
+                  </p>
+                  <p class="card-text">
+                    <small class="text-muted"
+                      >Última actualización hace 3 minutos</small
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item col-md-4">
+              <div class="card">
+                <img
+                  class="card-img-top img-fluid"
+                  src="https://picsum.photos/seed/picsum/536/354"
+                  alt="Card image cap" />
+                <div class="card-body">
+                  <h4 class="card-title">Card 2</h4>
+                  <p class="card-text">
+                    Esta es una tarjeta más larga con texto de apoyo a
+                    continuación como introducción natural al contenido
+                    adicional. Este contenido es un poco más largo.
+                  </p>
+                  <p class="card-text">
+                    <small class="text-muted"
+                      >Última actualización hace 3 minutos</small
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item col-md-4">
+              <div class="card">
+                <img
+                  class="card-img-top img-fluid"
+                  src="https://picsum.photos/seed/3/800/600"
+                  alt="Card image cap" />
+                <div class="card-body">
+                  <h4 class="card-title">Card 3</h4>
+                  <p class="card-text">
+                    Esta es una tarjeta más larga con texto de apoyo a
+                    continuación como introducción natural al contenido
+                    adicional. Este contenido es un poco más largo.
+                  </p>
+                  <p class="card-text">
+                    <small class="text-muted"
+                      >Última actualización hace 3 minutos</small
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item col-md-4">
+              <div class="card">
+                <img
+                  class="card-img-top img-fluid"
+                  src="https://picsum.photos/seed/4/800/600"
+                  alt="Card image cap" />
+                <div class="card-body">
+                  <h4 class="card-title">Card 4</h4>
+                  <p class="card-text">
+                    Esta es una tarjeta más larga con texto de apoyo a
+                    continuación como introducción natural al contenido
+                    adicional. Este contenido es un poco más largo.
+                  </p>
+                  <p class="card-text">
+                    <small class="text-muted"
+                      >Última actualización hace 3 minutos</small
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item col-md-4">
+              <div class="card">
+                <img
+                  class="card-img-top img-fluid"
+                  src="https://picsum.photos/seed/5/800/600"
+                  alt="Card image cap" />
+                <div class="card-body">
+                  <h4 class="card-title">Card 5</h4>
+                  <p class="card-text">
+                    Esta es una tarjeta más larga con texto de apoyo a
+                    continuación como introducción natural al contenido
+                    adicional. Este contenido es un poco más largo.
+                  </p>
+                  <p class="card-text">
+                    <small class="text-muted"
+                      >Última actualización hace 3 minutos</small
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item col-md-4">
+              <div class="card">
+                <img
+                  class="card-img-top img-fluid"
+                  src="https://picsum.photos/seed/6/800/600"
+                  alt="Card image cap" />
+                <div class="card-body">
+                  <h4 class="card-title">Card 6</h4>
+                  <p class="card-text">
+                    Esta es una tarjeta más larga con texto de apoyo a
+                    continuación como introducción natural al contenido
+                    adicional. Este contenido es un poco más largo.
+                  </p>
+                  <p class="card-text">
+                    <small class="text-muted"
+                      >Última actualización hace 3 minutos</small
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item col-md-4">
+              <div class="card">
+                <img
+                  class="card-img-top img-fluid"
+                  src="https://picsum.photos/seed/7/800/600"
+                  alt="Card image cap" />
+                <div class="card-body">
+                  <h4 class="card-title">Card 7</h4>
+                  <p class="card-text">
+                    Esta es una tarjeta más larga con texto de apoyo a
+                    continuación como introducción natural al contenido
+                    adicional. Este contenido es un poco más largo.
+                  </p>
+                  <p class="card-text">
+                    <small class="text-muted"
+                      >Última actualización hace 3 minutos</small
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <flecha
+            class="carousel-control-prev"
+            href="#myCarousel"
+            role="button"
+            data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </flecha>
+          <flecha
+            class="carousel-control-next"
+            href="#myCarousel"
+            role="button"
+            data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </flecha>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <!-- BARRA INFERIOR -->
+        <p style="font-weight: 550">
+          © By Poli Tecnico. All rights reserved. 2024/2025
+        </p>
+      </footer>
+    </div>
+
+    <!-- gareria de imagenes -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- menu -->
+    <script src="menup.js"></script>
+
+    <!--notas -->
+    <script>
+      const notas = {
+        version: "Web: v0.7.0",
+        build: "build: 11.04.2025",
+        fecha: "Creacion Aproximada: 04-4-2024",
+        by: "By: Informaticos del Poly",
+      };
+
+      console.log(notas["version"]);
+      console.log(notas["build"]);
+      console.log(notas["fecha"]);
+      console.log(notas["by"]);
+    </script>
+  </body>
+</html>
