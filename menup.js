@@ -3,7 +3,21 @@
  *
  * @format
  */
+//notificaciones
+const button = document.getElementById("Despliegue_Menu");
+const menu = document.getElementById("menu");
 
+button.addEventListener("click", () => {
+  menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+});
+
+document.addEventListener("click", (event) => {
+  if (!button.contains(event.target) && !menu.contains(event.target)) {
+    menu.style.display = "none";
+  }
+});
+// end
+// funcion de la gareria
 $(document).ready(function () {
   $("#myCarousel").on("slide.bs.carousel", function (e) {
     var $e = $(e.relatedTarget);
@@ -24,7 +38,8 @@ $(document).ready(function () {
     }
   });
 });
-
+//end
+///
 (function () {
   var $body = document.body,
     $menu_trigger = $body.getElementsByClassName("svg")[0];
@@ -59,7 +74,8 @@ $(function () {
     $(this).toggleClass("down");
   });
 });
-
+// end
+//funcionde despliegue del menu
 (function () {
   var $body = document.body,
     $menu_trigger = $body.getElementsByClassName("menu-trigger")[0];
